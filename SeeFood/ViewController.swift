@@ -25,7 +25,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // (If you had access to your phone, then you could replace with .camera, but the simulator only works with the photo library).
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
-
     }
 
     // What should happen once they picked an image, we should send the image to our Machine Learning model. So add a delegate method
@@ -47,8 +46,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         // dismiss the imagePicker and go back to our view controller
         imagePicker.dismiss(animated: true, completion: nil)
-
-
     }
 
     func detect(image: CIImage) {
@@ -92,6 +89,4 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
     }
 
-
 }
-
